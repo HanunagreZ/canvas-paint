@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 import { useRef } from 'react';
-import '../styles/canvas.scss';
 import canvasState from '../store/canvasState';
 import toolState from '../store/toolState';
 import Brush from '../tools/Brush';
+import '../styles/canvas.scss';
 
 const Canvas = observer(() => {
   const canvasRef = useRef();

@@ -8,6 +8,21 @@ import Line from '../tools/Line';
 import Rect from '../tools/Rect';
 
 const Toolbar = () => {
+  const changeColor = (e) => {
+    toolState.setStrokeColor(e.target.value);
+    toolState.setFillColor(e.target.value);
+  };
+
+  const download = () => {
+    const data = canvasState.canvas.toDataURL();
+    const a = document.createElement('a');
+    a.href = data;
+    a.download = 'canvas.jpg';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+
   return (
     <div className="toolbar">
       <button
@@ -30,10 +45,12 @@ const Toolbar = () => {
         className="toolbar__btn line"
         onClick={() => toolState.setTool(new Line(canvasState.canvas))}
       ></button>
-      <input type="color" style={{ marginLeft: 10 }} />
-      <button className="toolbar__btn undo"></button>
-      <button className="toolbar__btn redo"></button>
-      <button className="toolbar__btn save"></button>
+      <input
+        type="color"
+        style={{ marginLeft: 10 }}
+        onChange={(e) => changeColor(e)}
+      />
+      <button className="toolbar__btn save" onClick={() => download()}></button>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import Bubbles from './components/Bubbles';
 import Canvas from './components/Canvas';
 import SettingBar from './components/SettingBar';
 import Toolbar from './components/Toolbar';
@@ -9,6 +10,7 @@ function App() {
       <Toolbar />
       <SettingBar />
       <Canvas />
+      <Bubbles />
     </div>
   );
 }

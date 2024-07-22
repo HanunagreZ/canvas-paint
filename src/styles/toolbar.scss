@@ -1,7 +1,5 @@
-@import './variables';
-
 .toolbar {
-  height: $toolbar-height;
+  height: 40px;
   width: 100%;
   background-color: white;
   display: flex;
@@ -40,16 +38,8 @@
     background: url('../assets/img/eraser.svg') no-repeat center center;
   }
 
-  & .undo {
-    margin-left: auto;
-    background: url('../assets/img/undo.svg') no-repeat center center;
-  }
-
-  & .redo {
-    background: url('../assets/img/redo.svg') no-repeat center center;
-  }
-
   & .save {
+    margin-left: auto;
     margin-right: 10px;
     background: url('../assets/img/save.svg') no-repeat center center;
   }
@@ -58,4 +48,13 @@
 .setting-bar {
   top: 40px;
   z-index: 1;
+}
+
+.toolbar__btn {
+  transition: all 0.3s ease;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
 }

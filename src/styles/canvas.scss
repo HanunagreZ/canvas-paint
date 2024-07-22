@@ -1,5 +1,3 @@
-@import './variables';
-
 .canvas {
   height: 100vh;
   display: flex;
@@ -10,4 +8,6 @@
 canvas {
   border: 1px solid black;
   background-color: white;
+  position: relative;
+  z-index: 3;
 }
