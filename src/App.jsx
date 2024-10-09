@@ -6,7 +6,7 @@ import './styles/app.scss';
 
 function App() {
   return (
-    <div className="app">
+    <div className="appp">
       <Toolbar />
       <SettingBar />
       <Canvas />
